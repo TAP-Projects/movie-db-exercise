@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
 
   Person.associate = (models) => {
     // hasMany() and pass in the models object's Movie model
-    Person.hasMany(models.Movie)
+    Person.hasMany(models.Movie, {foreignKey:'directorPersonId'})
   };
 
   return Person;

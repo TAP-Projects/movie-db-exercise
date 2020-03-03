@@ -20,7 +20,7 @@ module.exports = (sequelize) => {
   }, { sequelize });
 
   Movie.associate = (models) => {
-    // TODO Add associations.
+    Movie.belongsTo(models.Person, {foreignKey:'directorPersonId'});
   };
 
   return Movie;
