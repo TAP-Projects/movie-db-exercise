@@ -20,7 +20,8 @@ module.exports = (sequelize) => {
   }, { sequelize });
 
   Person.associate = (models) => {
-    // TODO Add associations.
+    // hasMany() and pass in the models object's Movie model
+    Person.hasMany(models.Movie)
   };
 
   return Person;
