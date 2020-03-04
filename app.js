@@ -5,10 +5,7 @@ const {sequelize, models} = require('./db');
 // Get references to our models.
 const {Person, Movie} = models;
 
-// Define variables for the people and movies.
-// NOTE: We'll use these variables to assist with the creation
-// of our related data after we've defined the relationships
-// (or associations) between our models.
+// Define variables for the people and movies. NOTE: We'll use these variables to assist with the creation of our related data after we've defined the relationships (or associations) between our models.
 let bradBird;
 let vinDiesel;
 let eliMarienthal;
@@ -39,6 +36,7 @@ console.log('Testing the connection to the database...');
 
         // Retrieve people
 
+        // Tell Node to immediately terminate the process.
         process.exit();
     } catch (error) {
         if (error.name === 'SequelizeValidationError') {
