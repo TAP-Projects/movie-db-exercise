@@ -6,6 +6,7 @@ const Sequelize = require('sequelize');
 
 console.info('Instantiating and configuring the Sequelize object instance...');
 
+// This stuff often goes into config/config.json
 const options = {
   dialect: 'sqlite',
   storage: 'movies.db',
